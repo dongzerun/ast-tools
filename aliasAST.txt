@@ -1,0 +1,257 @@
+ type MyInt int 
+   201  .  .  2: *ast.GenDecl {
+   202  .  .  .  Doc: nil
+   203  .  .  .  TokPos: foo:12:1
+   204  .  .  .  Tok: type
+   205  .  .  .  Lparen: -
+   206  .  .  .  Specs: []ast.Spec (len = 1) {
+   207  .  .  .  .  0: *ast.TypeSpec {
+   208  .  .  .  .  .  Doc: nil
+   209  .  .  .  .  .  Name: *ast.Ident {
+   210  .  .  .  .  .  .  NamePos: foo:12:6
+   211  .  .  .  .  .  .  Name: "MyInt"
+   212  .  .  .  .  .  .  Obj: *ast.Object {
+   213  .  .  .  .  .  .  .  Kind: type
+   214  .  .  .  .  .  .  .  Name: "MyInt"
+   215  .  .  .  .  .  .  .  Decl: *(obj @ 207)
+   216  .  .  .  .  .  .  .  Data: nil
+   217  .  .  .  .  .  .  .  Type: nil
+   218  .  .  .  .  .  .  }
+   219  .  .  .  .  .  }
+   220  .  .  .  .  .  Assign: -
+   221  .  .  .  .  .  Type: *ast.Ident {
+   222  .  .  .  .  .  .  NamePos: foo:12:12
+   223  .  .  .  .  .  .  Name: "int"
+   224  .  .  .  .  .  .  Obj: nil
+   225  .  .  .  .  .  }
+   226  .  .  .  .  .  Comment: nil
+   227  .  .  .  .  }
+   228  .  .  .  }
+   229  .  .  .  Rparen: -
+type MyTime time.Time
+   .  .  Specs: []ast.Spec (len = 1) {
+   237  .  .  .  .  0: *ast.TypeSpec {
+   238  .  .  .  .  .  Doc: nil
+   239  .  .  .  .  .  Name: *ast.Ident {
+   240  .  .  .  .  .  .  NamePos: foo:14:6
+   241  .  .  .  .  .  .  Name: "MyTime"
+   242  .  .  .  .  .  .  Obj: *ast.Object {
+   243  .  .  .  .  .  .  .  Kind: type
+   244  .  .  .  .  .  .  .  Name: "MyTime"
+   245  .  .  .  .  .  .  .  Decl: *(obj @ 237)
+   246  .  .  .  .  .  .  .  Data: nil
+   247  .  .  .  .  .  .  .  Type: nil
+   248  .  .  .  .  .  .  }
+   249  .  .  .  .  .  }
+   250  .  .  .  .  .  Assign: -
+   251  .  .  .  .  .  Type: *ast.SelectorExpr {
+   252  .  .  .  .  .  .  X: *ast.Ident {
+   253  .  .  .  .  .  .  .  NamePos: foo:14:13
+   254  .  .  .  .  .  .  .  Name: "time"
+   255  .  .  .  .  .  .  .  Obj: nil
+   256  .  .  .  .  .  .  }
+   257  .  .  .  .  .  .  Sel: *ast.Ident {
+   258  .  .  .  .  .  .  .  NamePos: foo:14:18
+   259  .  .  .  .  .  .  .  Name: "Time"
+   260  .  .  .  .  .  .  .  Obj: nil
+   261  .  .  .  .  .  .  }
+   262  .  .  .  .  .  }
+   263  .  .  .  .  .  Comment: nil
+   264  .  .  .  .  }
+type ConfigurationV2 struct {
+   Typs AdditionalServiceTypes `json:"additionalServices"`
+        Age MyInt
+        CreateAt MyTime
+}
+
+.  .  .  .  .  .  .  .  2: *ast.Field {
+   235  .  .  .  .  .  .  .  .  .  Doc: nil
+   236  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   237  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   238  .  .  .  .  .  .  .  .  .  .  .  NamePos: foo:11:9
+   239  .  .  .  .  .  .  .  .  .  .  .  Name: "CreateAt"
+   240  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   241  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   242  .  .  .  .  .  .  .  .  .  .  .  .  Name: "CreateAt"
+   243  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 234)
+   244  .  .  .  .  .  .  .  .  .  .  .  .  Data: nil
+   245  .  .  .  .  .  .  .  .  .  .  .  .  Type: nil
+   246  .  .  .  .  .  .  .  .  .  .  .  }
+   247  .  .  .  .  .  .  .  .  .  .  }
+   248  .  .  .  .  .  .  .  .  .  }
+   249  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   250  .  .  .  .  .  .  .  .  .  .  NamePos: foo:11:18
+   251  .  .  .  .  .  .  .  .  .  .  Name: "MyTime"
+   252  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   253  .  .  .  .  .  .  .  .  .  .  .  Kind: type
+   254  .  .  .  .  .  .  .  .  .  .  .  Name: "MyTime"
+   255  .  .  .  .  .  .  .  .  .  .  .  Decl: *ast.TypeSpec {
+   256  .  .  .  .  .  .  .  .  .  .  .  .  Doc: nil
+   257  .  .  .  .  .  .  .  .  .  .  .  .  Name: *ast.Ident {
+   258  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: foo:16:6
+   259  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "MyTime"
+   260  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 252)
+   261  .  .  .  .  .  .  .  .  .  .  .  .  }
+   262  .  .  .  .  .  .  .  .  .  .  .  .  Assign: -
+   263  .  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.SelectorExpr {
+   264  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   265  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: foo:16:13
+   266  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "time"
+   267  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   268  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   269  .  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   270  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: foo:16:18
+   271  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Time"
+   272  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   273  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   274  .  .  .  .  .  .  .  .  .  .  .  .  }
+   275  .  .  .  .  .  .  .  .  .  .  .  .  Comment: nil
+   276  .  .  .  .  .  .  .  .  .  .  .  }
+   277  .  .  .  .  .  .  .  .  .  .  .  Data: nil
+   278  .  .  .  .  .  .  .  .  .  .  .  Type: nil
+   279  .  .  .  .  .  .  .  .  .  .  }
+   280  .  .  .  .  .  .  .  .  .  }
+   281  .  .  .  .  .  .  .  .  .  Tag: nil
+   282  .  .  .  .  .  .  .  .  .  Comment: nil
+   283  .  .  .  .  .  .  .  .  }
+   284  .  .  .  .  .  .  .  }
+   285  .  .  .  .  .  .  .  Closing: foo:12:1
+   286  .  .  .  .  .  .  }
+
+// AdditionalServiceTypes ...
+type AdditionalServiceTypes []AdditionalServiceType
+
+// AdditionalServiceType ...
+type AdditionalServiceType struct {
+   ID   string                `json:"id"`
+   Data int `json:"data"`
+}
+
+  .  .  .  .  .  .  .  0: *ast.Field {
+    62  .  .  .  .  .  .  .  .  .  Doc: nil
+    63  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+    64  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+    65  .  .  .  .  .  .  .  .  .  .  .  NamePos: foo:9:2
+    66  .  .  .  .  .  .  .  .  .  .  .  Name: "Typs"
+    67  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+    68  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+    69  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Typs"
+    70  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 61)
+    71  .  .  .  .  .  .  .  .  .  .  .  .  Data: nil
+    72  .  .  .  .  .  .  .  .  .  .  .  .  Type: nil
+    73  .  .  .  .  .  .  .  .  .  .  .  }
+    74  .  .  .  .  .  .  .  .  .  .  }
+    75  .  .  .  .  .  .  .  .  .  }
+    76  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+    77  .  .  .  .  .  .  .  .  .  .  NamePos: foo:9:7
+    78  .  .  .  .  .  .  .  .  .  .  Name: "AdditionalServiceTypes"
+    79  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+    80  .  .  .  .  .  .  .  .  .  .  .  Kind: type
+    81  .  .  .  .  .  .  .  .  .  .  .  Name: "AdditionalServiceTypes"
+    82  .  .  .  .  .  .  .  .  .  .  .  Decl: *ast.TypeSpec {
+    83  .  .  .  .  .  .  .  .  .  .  .  .  Doc: nil
+    84  .  .  .  .  .  .  .  .  .  .  .  .  Name: *ast.Ident {
+    85  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: foo:20:6
+    86  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "AdditionalServiceTypes"
+    87  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 79)
+    88  .  .  .  .  .  .  .  .  .  .  .  .  }
+    89  .  .  .  .  .  .  .  .  .  .  .  .  Assign: -
+    90  .  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.ArrayType {
+    91  .  .  .  .  .  .  .  .  .  .  .  .  .  Lbrack: foo:20:29
+    92  .  .  .  .  .  .  .  .  .  .  .  .  .  Len: nil
+    93  .  .  .  .  .  .  .  .  .  .  .  .  .  Elt: *ast.Ident {
+    94  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: foo:20:31
+    95  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "AdditionalServiceType"
+    96  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+    97  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: type
+    98  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "AdditionalServiceType"
+    99  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *ast.TypeSpec {
+   100  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Doc: nil
+   101  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: *ast.Ident {
+   102  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: foo:23:6
+   103  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "AdditionalServiceType"
+   104  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 96)
+   105  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   106  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Assign: -
+   107  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.StructType {
+   108  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Struct: foo:23:28
+   109  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Fields: *ast.FieldList {
+   110  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Opening: foo:23:35
+   111  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  List: []*ast.Field (len = 2) {
+   112  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.Field {
+   113  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Doc: nil
+   114  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   115  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   116  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: foo:24:2
+   117  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "ID"
+   118  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   119  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   120  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "ID"
+   121  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 112)
+   122  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Data: nil
+   123  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: nil
+   124  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   125  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   126  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   127  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   128  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: foo:24:7
+   129  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "string"
+   130  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   131  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   132  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Tag: *ast.BasicLit {
+   133  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: foo:24:29
+   134  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   135  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "`json:\"id\"`"
+   136  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   137  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Comment: nil
+   138  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   139  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: *ast.Field {
+   140  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Doc: nil
+   141  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   142  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   143  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: foo:25:2
+   144  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Data"
+   145  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   146  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   147  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Data"
+   148  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 139)
+   149  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Data: nil
+   150  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: nil
+   151  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   152  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   153  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   154  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   155  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: foo:25:7
+   156  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "int"
+   157  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   158  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   159  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Tag: *ast.BasicLit {
+   160  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: foo:25:11
+   161  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   162  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "`json:\"data\"`"
+   163  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   164  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Comment: nil
+   165  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   166  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   167  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Closing: foo:26:1
+   168  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   169  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Incomplete: false
+   170  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   171  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Comment: nil
+   172  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   173  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Data: nil
+   174  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: nil
+   175  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   176  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   177  .  .  .  .  .  .  .  .  .  .  .  .  }
+   178  .  .  .  .  .  .  .  .  .  .  .  .  Comment: nil
+   179  .  .  .  .  .  .  .  .  .  .  .  }
+   180  .  .  .  .  .  .  .  .  .  .  .  Data: nil
+   181  .  .  .  .  .  .  .  .  .  .  .  Type: nil
+   182  .  .  .  .  .  .  .  .  .  .  }
+   183  .  .  .  .  .  .  .  .  .  }
+   184  .  .  .  .  .  .  .  .  .  Tag: *ast.BasicLit {
+   185  .  .  .  .  .  .  .  .  .  .  ValuePos: foo:9:30
+   186  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   187  .  .  .  .  .  .  .  .  .  .  Value: "`json:\"additionalServices\"`"
+   188  .  .  .  .  .  .  .  .  .  }

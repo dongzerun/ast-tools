@@ -1,0 +1,8 @@
+@@
+@@
+go func() {
++	if err := recover(); err != nil {
++		logging.Error(workerGroupTag, "stream %s consumer workers recover from panic, worker=%s err=%+v", wg.streamName, workerName, err)
++	}
+   ...
+ }()
